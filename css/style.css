@@ -1,0 +1,657 @@
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&family=Montserrat&family=Open+Sans&display=swap');
+*{box-sizing: border-box; -webkit-box-sizing: border-box; }
+
+::selection { 
+    color: #ff5e00;
+}
+
+html, 
+body { 
+    height: 100%; 
+}
+
+body {  
+    background-color: #fff; 
+    margin: 0; font: 16px/1.3 sans-serif; 
+}
+
+
+
+ .container {
+     height: 100vh;
+     margin: auto;
+ }
+
+ /* Navbar Css begins */
+
+ .navbar-container {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: capitalize;
+    border-bottom: 0.5px solid #eee;
+    z-index: 9;
+    overflow: hidden;
+
+ }
+
+ .nav-logo {
+     position: relative;
+     flex: 1;
+     color: black;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: bold;
+     font-size: 16px;
+ }
+
+ .navbar ul {
+    flex: 1;
+    display: flex;
+    padding: 0 20px;
+    padding-left: 0;
+    list-style-type: none;
+    cursor: pointer;
+    line-height: 1.5;
+ }
+
+ li a{
+     padding: 0 10px;
+     color: #5b5b5b;
+     font-family: 'Open Sans', sans-serif;
+     font-weight: bold;
+     font-size: 14px;
+     text-decoration: none;
+ }
+
+ li a:hover { 
+     color: #ffa600;
+     transition: all 0.7s;
+}
+
+ .color-code {
+     flex: 1;
+     position: relative;
+     color: black;
+     font-family: 'Montserrat', sans-serif;
+     font-size: 16px;
+     font-weight: bolder;
+     cursor: pointer;
+ }
+ .color-code:hover {
+    color: #ffa600;
+ }
+ /* Navbar css ends here */
+
+/* Header Begins */
+ .header-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+ }
+
+ .header-info {
+    display: block;
+    flex: 1;
+    position: relative;
+    bottom: 125px;
+    left: 365px;
+ }
+
+ .header-span {
+     color: #000;
+     letter-spacing: 0.2px;
+     font-family: 'Open Sans', sans-serif;
+     font-weight: bold;
+     font-size: 14px;
+     
+ }
+
+
+ .header-info > h1 { 
+     text-transform: capitalize;
+     font-family:Arial, Helvetica, sans-serif;
+     font-weight: bolder;
+     font-size: 1.8em;
+     color: #212121;
+ }
+
+ .description {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    color: #5b5b5b;
+    max-width: 70%;
+ }
+
+ .button {
+     margin-top: 1.5rem !important;
+ }
+ 
+ button {
+     height: 47px;
+     background-color: #eee;
+     border-radius: 50px;
+     cursor: pointer;
+     font-size: 14px;
+     transition: all 0.3s;
+     font-weight: bold;
+     line-height: normal;
+     border: none;
+     text-align: center;
+     padding: 0px 29px;
+ }
+
+ button:last-child {
+     content: "";
+     background: #474559;
+     color: #fff;
+ }
+
+ .header-svg {
+     position: relative;
+     flex: 1;
+     padding: 2rem;
+     bottom: 125px;
+     left: 40px;
+ }
+
+ .header-svg > svg {
+     height: auto; 
+     width: 69%;
+    
+     
+ }
+
+ button:hover {
+     color: #ffa600;
+ }
+
+ /* Header ends here */
+
+/* Project css begins */
+
+.CSSgal {
+	position: relative;
+	overflow: hidden;
+	height: 80%; /* Or set a fixed height */
+    bottom: 100px;
+}
+
+/* SLIDER */
+.project-title { 
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    color: #353535;
+    font-size: 2.4em;
+    font-weight: bold;
+    bottom: 100px;
+}
+.CSSgal .slider {
+	height: 100%;
+	white-space: nowrap;
+	font-size: 0;
+	transition: 0.8s;
+}
+
+/* SLIDES */
+
+.CSSgal .slider > * {
+	font-size: 1rem;
+	display: inline-block;
+	white-space: normal;
+	vertical-align: top;
+	height: 100%;
+	width: 100%;
+	background: none 50% no-repeat;
+	background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding-left: 18%;
+    padding-right: 18%;
+}
+
+.CSSgal .slider img {
+    object-fit: cover;
+}
+
+/* PREV/NEXT, CONTAINERS & ANCHORS */
+
+.CSSgal .prevNext {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	width: 100%;
+	height: 0;
+    transform: translate(0, -50%);
+    font-family: 'unicons';
+    font-size: 100px;
+    line-height: normal;
+}
+
+.CSSgal .prevNext > div+div {
+	visibility: hidden; /* Hide all but first P/N container */
+}
+
+.CSSgal .prevNext a {
+	background: transparent;
+	position: absolute;
+	width:       60px;
+	height:      60px;
+	opacity: 0.7;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	left: 320px;
+}
+.CSSgal .prevNext a:hover {
+	color: goldenrod;
+}
+.CSSgal .prevNext a+a {
+	left: auto;
+	right: 370px;
+}
+
+/* NAVIGATION */
+
+.CSSgal .bullets {
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	padding: 10px 0;
+	width: 100%;
+	text-align: center;
+}
+.CSSgal .bullets > a {
+	display: inline-block;
+	width:       10px;
+	height:      10px;
+	line-height: 10px;
+	text-decoration: none;
+	text-align: center;
+	background: #0a0606;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+
+}
+.CSSgal .bullets > a+a {
+	background: rgba(230, 222, 222, 0.8); /* Dim all but first */
+}
+.CSSgal .bullets > a:hover {
+	background: rgba(89, 173, 9, 0.911) !important;
+}
+
+/* NAVIGATION BUTTONS */
+/* ALL: */
+.CSSgal >s:target ~ .bullets >* {      background: rgba(10, 6, 6, 0.5);}
+/* ACTIVE */
+#s1:target ~ .bullets >*:nth-child(1) {background: rgb(14, 7, 7);}
+#s2:target ~ .bullets >*:nth-child(2) {background: rgb(14, 7, 7);}
+#s3:target ~ .bullets >*:nth-child(3) {background: rgb(14, 7, 7);}
+#s4:target ~ .bullets >*:nth-child(4) {background: rgb(14, 7, 7);}
+/* More slides? Add here more rules */
+
+/* PREV/NEXT CONTAINERS VISIBILITY */
+/* ALL: */
+.CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
+/* ACTIVE: */
+#s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
+#s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
+#s3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
+#s4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
+/* More slides? Add here more rules */
+
+/* SLIDER ANIMATION POSITIONS */
+
+#s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+#s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
+#s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
+/* More slides? Add here more rules */
+
+
+.CSSgal{
+	color: #000;	
+	text-align: center;
+}
+.CSSgal .slider h2 {
+	font-weight: 200;
+	letter-spacing: -0.06em;
+	word-spacing: 0.2em;
+	font-size: 3em;
+}
+.CSSgal a {
+	border-radius: 50%;
+	margin: 0 3px;
+	color: rgba(0,0,0,0.8);
+	text-decoration: none;
+}
+
+/* Projects Ends */
+
+/* More Info CSS */
+.more-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.education {
+  width: min(500px, 95vw);
+}
+
+.education__heading {
+  padding-inline-start: 4rem;
+}
+.education__heading h4 {
+  font-size: 2rem;
+  margin-block: 0.5rem;
+}
+
+.education__content {
+  position: relative;
+  padding: 1rem 1rem 1rem 4rem;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.education__content h5 {
+   color: rgba(0, 0, 0, 0.9);
+   font-size: 1rem;
+   margin-left: 40px;
+}
+.education__content p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1rem;
+   margin-left: 40px;
+}
+
+.education__content .year {
+  position: absolute;
+  content: var(--year);
+  width: 75px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 1.1rem;
+  color: white;
+  border-radius: 50%;
+  background-color: #474559;
+  box-shadow: inset 0 0 0 1px white;
+  border: 1px solid #474559;
+  left: 1rem;
+  top: 1.74rem;
+}
+
+.education__content .year span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  line-height: 75px;
+}
+
+.education__content:hover {
+  background-color: rgba(230, 230, 230, 0.48);
+  border-radius : 0.25rem;
+}
+
+.education__content:not(:last-child):before {
+   position: absolute;
+   content: "";
+   width: 4px;
+   background-color: #dedede;
+   top: 2.74rem;
+   bottom: -4.74rem;
+   z-index: -1;
+   left: calc(4rem - 14px);
+   background-color: #474559;
+} 
+
+.pre-footer {
+   position: relative;
+   display: flex;
+   width: 100%;
+   height: 100%;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   overflow: hidden;
+}
+
+.contact-info {
+  position: inherit;
+  display: block;
+  padding: 0 16rem;
+  flex: 1;
+}
+.contact-info iframe {
+    width: 100%;
+}
+.contact-info-bottom {
+   display: flex;
+   background: black;
+   background-image: url('https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   opacity: 0.8;
+   z-index: -1;
+   height: 180px;
+}
+
+.contact-info-item {
+    display: block;
+    position: inherit;
+    justify-content: space-between;
+    padding: 0 3rem;
+    width: 100%;
+}
+
+.contact-info-item h3 {
+    font-size: 1.8em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff; 
+}
+
+h3 .text-white {
+    line-height: 0.5;
+    letter-spacing: 0.3;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+
+.contact-info-item p {
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+.contact-info-item .footer-text { 
+    line-height: 0.5;
+    letter-spacing: 0.3;
+    white-space: nowrap;
+}
+
+.contact-info-item p a {
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: none;
+}
+
+.contact-social-item {
+    position: relative;
+    display: block;
+}
+
+.contact-social-item ul {
+    position: inherit;
+    list-style-type: none;
+    font-size: 31px;
+    bottom: 20px;
+}
+
+.contact-social-item .social-links {
+    padding: 1.5rem;
+}
+
+.social-links li a{
+    color: wheat;
+    font-size: 28px;
+}
+
+.pre-footer-form {
+    flex: 1;
+    position: relative;
+    background: transparent;
+    bottom: 50px;
+    right: 148px; 
+}
+
+.pre-footer-h2 {
+    font-size: 2.8rem;
+}
+
+.form-row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.form-col {
+    position: relative;
+    width: 100%;
+}
+
+.form-row .form-input {
+    outline: none;
+    width: 49%;
+    height: 60px;
+    padding: 0.375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.form-row .form-textarea {
+    width: 100%;
+    position: relative;
+    top: 1.5rem;
+    height: 15%;
+    outline: none;
+}
+
+.pre-footer-btn {
+    position: relative;
+    top: 50px;
+    height: 60px;
+    width: 100%;
+    color: white;
+}
+
+.footer {
+    width: 100%;
+    height: 15%;
+    font-size: 16px;
+    font-weight: normal;
+    display: block;
+    overflow: hidden;
+}
+
+.footer p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #1b1818;
+    text-align: center;
+}
+
+
+
+/* Keyframes for header */
+h1 {
+    font-size: 3.5vw;
+    position: relative;
+    width: max-content; 
+    font-weight: normal;
+  }
+  
+  h1:before, h1:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  
+  h1::before {
+    background: white;
+    animation: write 2.5s steps(25) 0.5s forwards; /* Number of steps */
+    width: 100%;
+  }
+  
+  h1::after {
+    opacity: 1;
+    width: 0.15em; 
+    background: black;
+    animation: write 2.5s steps(25) 0.5s forwards, blink 0.75s steps(2) infinite;
+  }
+  
+  p {
+    font-size: 2.5vw;
+  }
+  
+  .bold {
+    font-weight: 600;
+  }
+  
+  @keyframes write {
+    to {
+      left: 100%;
+    }
+    
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 0;
+    } 
+    49.9% {
+       opacity: 0;
+    }
+    50% {
+       opacity: 1;
+    }
+    100% {
+       opacity: 1;
+    }
+  }
+
